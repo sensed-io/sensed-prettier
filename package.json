@@ -1,0 +1,37 @@
+{
+  "name": "@sensed/prettier-config",
+  "version": "1.0.0",
+  "description": "Shared Prettier configuration for Sensed projects",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    ".prettierrc.json",
+    ".prettierignore"
+  ],
+  "keywords": [
+    "prettier",
+    "config",
+    "formatting",
+    "code-style"
+  ],
+  "author": "Aly Nasser",
+  "license": "MIT",
+  "peerDependencies": {
+    "prettier": "^3.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sensed-io/sensed-prettier.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
