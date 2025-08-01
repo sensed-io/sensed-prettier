@@ -1,12 +1,12 @@
-# ✨ @sensed/prettier-config
+# ✨ @sensed/prettier
 
 > 🎯 **The Ultimate Prettier Configuration** - Consistent, beautiful code formatting across all Sensed projects!
 
-[![npm version](https://badge.fury.io/js/@sensed%2Fprettier-config.svg)](https://www.npmjs.com/package/@sensed/prettier-config)
-[![Downloads](https://img.shields.io/npm/dm/@sensed/prettier-config.svg)](https://www.npmjs.com/package/@sensed/prettier-config)
+[![npm version](https://badge.fury.io/js/@sensed%2Fprettier.svg)](https://www.npmjs.com/package/@sensed/prettier)
+[![Downloads](https://img.shields.io/npm/dm/@sensed/prettier.svg)](https://www.npmjs.com/package/@sensed/prettier)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 🚀 Why Choose @sensed/prettier-config?
+## 🚀 Why Choose @sensed/prettier?
 
 - 🎨 **Beautiful Code**: Transform messy code into art
 - ⚡ **Zero Config**: Works out of the box with sensible defaults
@@ -19,13 +19,13 @@
 
 ```bash
 # npm
-npm install --save-dev @sensed/prettier-config prettier
+npm install --save-dev @sensed/prettier prettier
 
 # yarn
-yarn add --dev @sensed/prettier-config prettier
+yarn add --dev @sensed/prettier prettier
 
 # pnpm
-pnpm add -D @sensed/prettier-config prettier
+pnpm add -D @sensed/prettier prettier
 ```
 
 ## 🎯 Quick Start
@@ -36,7 +36,7 @@ Add this magic line to your `package.json`:
 
 ```json
 {
-  "prettier": "@sensed/prettier-config"
+  "prettier": "@sensed/prettier"
 }
 ```
 
@@ -45,7 +45,7 @@ Add this magic line to your `package.json`:
 Create a `.prettierrc.js` file:
 
 ```javascript
-module.exports = require('@sensed/prettier-config');
+module.exports = require('@sensed/prettier');
 ```
 
 ### Method 3: 🔧 Custom Configuration
@@ -54,7 +54,7 @@ Need to tweak something? No problem!
 
 ```javascript
 // .prettierrc.js
-const sensedConfig = require('@sensed/prettier-config');
+const sensedConfig = require('@sensed/prettier');
 
 module.exports = {
   ...sensedConfig,
@@ -178,8 +178,8 @@ Want to make this config even more awesome?
 ## 🎉 Ready to Transform Your Code?
 
 ```bash
-npm install --save-dev @sensed/prettier-config prettier
-echo '{"prettier": "@sensed/prettier-config"}' >> package.json
+npm install --save-dev @sensed/prettier prettier
+echo '{"prettier": "@sensed/prettier"}' >> package.json
 npx prettier --write .
 ```
 
