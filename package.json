@@ -1,6 +1,6 @@
 {
   "name": "@sensed/prettier-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared Prettier configuration for Sensed projects",
   "main": "index.js",
   "keywords": [
@@ -14,12 +14,14 @@
   "peerDependencies": {
     "prettier": "^3.0.0"
   },
-  "devDependencies": {
+  "dependencies": {
     "@prettier/plugin-xml": "^3.4.2",
-    "prettier": "^3.3.3",
     "prettier-package-json": "^2.8.0",
     "prettier-plugin-organize-attributes": "^1.0.0",
     "sort-package-json": "^3.4.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
   },
   "scripts": {
     "format": "prettier --write .",
