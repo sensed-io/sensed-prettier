@@ -1,3 +1,19 @@
+const attributeOptions = {
+  plugins: [require.resolve('prettier-plugin-organize-attributes')],
+  attributeSort: 'ASC',
+  attributeGroups: [
+    '$ANGULAR_STRUCTURAL_DIRECTIVE',
+    '$ANGULAR_ELEMENT_REF',
+    '$ID',
+    '$CLASS',
+    '$ANGULAR_ANIMATION',
+    '$ANGULAR_ANIMATION_INPUT',
+    '$ANGULAR_INPUT',
+    '$ANGULAR_TWO_WAY_BINDING',
+    '$ANGULAR_OUTPUT',
+  ],
+};
+
 module.exports = {
   $schema: 'https://json.schemastore.org/prettierrc',
   overrides: [
