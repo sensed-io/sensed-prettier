@@ -5,6 +5,43 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.6] - 2025-08-02
+
+### Added
+
+- **Comprehensive Documentation**: Added extensive inline comments throughout the configuration
+- **CONFIGURATION.md**: Created detailed documentation covering all options, examples, and troubleshooting
+- **Enhanced Attribute Organization**: Expanded attribute grouping with more sophisticated rules
+- **File-Specific Comments**: Added detailed explanations for each file type override
+
+### Enhanced
+
+- **Attribute Options**: Added advanced options like `attributeIgnoreCase`, `attributeNewlines`, and
+  `customAttributeValueWrapping`
+- **Code Documentation**: Added JSDoc comments explaining every configuration option
+- **Examples**: Provided before/after formatting examples in documentation
+
+## [1.0.5] - 2025-08-02
+
+### Fixed
+
+- Fixed SVG options file reference that was causing configuration errors
+- Removed dependency on non-existent `options/svg.js` file
+
+## [1.0.4] - 2025-08-02
+
+### Fixed
+
+- Fixed SVG options file reference in prettier configuration
+- Resolved missing file dependency issues
+
+## [1.0.3] - 2025-08-02
+
+### Fixed
+
+- Fixed `attributeOptions` definition that was causing configuration errors
+- Added missing attribute organization options
+
 ## [1.0.2] - 2025-08-01
 
 ### Changed
