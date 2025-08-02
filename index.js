@@ -1,6 +1,15 @@
 const attributeOptions = {
     plugins: [require.resolve('prettier-plugin-organize-attributes')],
     attributeSort: 'ASC',
+    attributeIgnoreCase: true,
+    attributeNewlines: 'auto',
+    attributeNewlinesThreshold: 3,
+    attributeSeparator: ' ',
+    customAttributeValueWrapping: {
+        className: 'preserve-newlines',
+        style: 'preserve-newlines',
+    },
+    // Angular-specific
     attributeGroups: [
         '$ANGULAR_STRUCTURAL_DIRECTIVE',
         '$ANGULAR_ELEMENT_REF',
@@ -11,11 +20,34 @@ const attributeOptions = {
         '$ANGULAR_INPUT',
         '$ANGULAR_TWO_WAY_BINDING',
         '$ANGULAR_OUTPUT',
+        '$DEFAULT',
+        '^data-',
+        '^aria-',
+        '^on[A-Z].*',
     ],
 };
 
 module.exports = {
     $schema: 'https://json.schemastore.org/prettierrc',
+    printWidth: 120,
+    tabWidth: 4,
+    arrowParens: 'always',
+    bracketSpacing: false,
+    endOfLine: 'lf',
+    htmlWhitespaceSensitivity: 'ignore',
+    proseWrap: 'always',
+    semi: true,
+    singleAttributePerLine: true,
+    singleQuote: true,
+    trailingComma: 'all',
+    useTabs: false,
+    bracketSameLine: false,
+    embeddedLanguageFormatting: 'auto',
+    experimentalTernaries: false,
+    quoteProps: 'as-needed',
+    requirePragma: false,
+    insertPragma: false,
+    vueIndentScriptAndStyle: false,
     overrides: [
         {
             files: ['*.json'],
@@ -37,12 +69,15 @@ module.exports = {
             },
         },
         {
-            files: ['*.less'],
-            options: {parser: 'less'},
-        },
-        {
             files: ['*.scss'],
             options: {parser: 'scss'},
+        },
+        {
+            files: ['*.css', '*.scss'],
+            options: {
+                printWidth: 120,
+                singleQuote: false,
+            },
         },
         {
             files: ['*.xml'],
@@ -60,7 +95,7 @@ module.exports = {
             options: {tabWidth: 2, parser: 'markdown'},
         },
         {
-            files: ['*.html'],
+            files: ['*.component.html'],
             options: {
                 printWidth: 120,
                 parser: 'angular',
@@ -71,21 +106,11 @@ module.exports = {
             files: ['*.js', '*.ts'],
             options: {
                 ...attributeOptions,
-                printWidth: 90,
+                bracketSameLine: false,
+                singleAttributePerLine: true,
+                printWidth: 100,
                 parser: 'typescript',
             },
         },
     ],
-    printWidth: 120,
-    tabWidth: 4,
-    arrowParens: 'always',
-    bracketSpacing: false,
-    endOfLine: 'lf',
-    htmlWhitespaceSensitivity: 'ignore',
-    proseWrap: 'always',
-    semi: true,
-    singleAttributePerLine: true,
-    singleQuote: true,
-    trailingComma: 'all',
-    useTabs: false,
 };
