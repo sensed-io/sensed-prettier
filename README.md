@@ -36,7 +36,7 @@ Add this magic line to your `package.json`:
 
 ```json
 {
-  "prettier": "@sensed/prettier"
+    "prettier": "@sensed/prettier"
 }
 ```
 
@@ -57,10 +57,10 @@ Need to tweak something? No problem!
 const sensedConfig = require('@sensed/prettier');
 
 module.exports = {
-  ...sensedConfig,
-  // Your awesome overrides ✨
-  printWidth: 100,
-  semi: false,
+    ...sensedConfig,
+    // Your awesome overrides ✨
+    printWidth: 100,
+    semi: false,
 };
 ```
 
@@ -99,11 +99,11 @@ Add these power-user scripts to your `package.json`:
 
 ```json
 {
-  "scripts": {
-    "format": "prettier --write . 💨",
-    "format:check": "prettier --check . 🔍",
-    "format:watch": "prettier --write . --watch 👀"
-  }
+    "scripts": {
+        "format": "prettier --write . 💨",
+        "format:check": "prettier --check . 🔍",
+        "format:watch": "prettier --write . --watch 👀"
+    }
 }
 ```
 
@@ -111,16 +111,17 @@ Add these power-user scripts to your `package.json`:
 
 ### 💙 VS Code
 
-Install the [Prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and add this to your settings:
+Install the [Prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and add
+this to your settings:
 
 ```json
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
-  },
-  "editor.rulers": [120]
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "editor.rulers": [120]
 }
 ```
 
@@ -137,10 +138,10 @@ Install the [Prettier extension](https://marketplace.visualstudio.com/items?item
 
 ```javascript
 const messyObject = {
-  name: 'John',
-  age: 30,
-  hobbies: ['coding', 'reading'],
-  address: { street: '123 Main St', city: 'Anytown' },
+    name: 'John',
+    age: 30,
+    hobbies: ['coding', 'reading'],
+    address: {street: '123 Main St', city: 'Anytown'},
 };
 ```
 
@@ -148,13 +149,13 @@ const messyObject = {
 
 ```javascript
 const beautifulObject = {
-  name: 'John',
-  age: 30,
-  hobbies: ['coding', 'reading'],
-  address: {
-    street: '123 Main St',
-    city: 'Anytown',
-  },
+    name: 'John',
+    age: 30,
+    hobbies: ['coding', 'reading'],
+    address: {
+        street: '123 Main St',
+        city: 'Anytown',
+    },
 };
 ```
 

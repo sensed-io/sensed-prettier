@@ -2,8 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
+[Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [1.0.2] - 2025-08-01
 
@@ -17,12 +17,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Moved Prettier plugins from `devDependencies` to `dependencies` to ensure they are installed when the package is consumed
+- Moved Prettier plugins from `devDependencies` to `dependencies` to ensure they are installed when the package is
+  consumed
 - Plugins are now properly available when using the configuration in other projects
 
 ### Dependencies
 
-- Moved `@prettier/plugin-xml`, `prettier-package-json`, `prettier-plugin-organize-attributes`, and `sort-package-json` to `dependencies`
+- Moved `@prettier/plugin-xml`, `prettier-package-json`, `prettier-plugin-organize-attributes`, and `sort-package-json`
+  to `dependencies`
 - Kept `prettier` in `devDependencies` for package development and as `peerDependencies` for consumers
 
 ## [1.0.0] - 2025-08-01

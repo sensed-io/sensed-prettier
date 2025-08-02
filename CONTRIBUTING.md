@@ -1,6 +1,7 @@
 # Contributing to @sensed/prettier-config
 
-Thank you for your interest in contributing! This document provides guidelines for contributing to our shared Prettier configuration.
+Thank you for your interest in contributing! This document provides guidelines for contributing to our shared Prettier
+configuration.
 
 ## Development Setup
 
@@ -17,12 +18,12 @@ When modifying the Prettier configuration:
 
 1. Update `.prettierrc.json` with your changes
 2. Test the new configuration on various file types:
-   - JavaScript (.js)
-   - TypeScript (.ts, .tsx)
-   - JSON (.json)
-   - Markdown (.md)
-   - CSS/SCSS (.css, .scss)
-   - HTML (.html)
+    - JavaScript (.js)
+    - TypeScript (.ts, .tsx)
+    - JSON (.json)
+    - Markdown (.md)
+    - CSS/SCSS (.css, .scss)
+    - HTML (.html)
 
 3. Update the README.md if the changes affect usage
 4. Update CHANGELOG.md with your changes

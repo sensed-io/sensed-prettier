@@ -1,43 +1,38 @@
 const prettier = import('prettier');
 const sortPackageJson = import('sort-package-json');
-const { parsers } = require('prettier/parser-babel');
+const {parsers} = require('prettier/parser-babel');
 
 const parser = parsers['json-stringify'];
 
 exports.parsers = {
-  'json-stringify': {
-    ...parser,
-    /**
-     * @param {string} text
-     * @param {{ filepath: string | undefined; }} options
-     */
-    async parse(text, options) {
-      if (options.filepath?.endsWith('package-lock.json')) {
-        return parser.parse(text, options);
-      }
+    'json-stringify': {
+        ...parser,
+        /**
+         * @param {string} text
+         * @param {{ filepath: string | undefined; }} options
+         */
+        async parse(text, options) {
+            if (options.filepath?.endsWith('package-lock.json')) {
+                return parser.parse(text, options);
+            }
 
-      text = await (
-        await prettier
-      ).format(text, { filepath: options.filepath });
+            text = await (await prettier).format(text, {filepath: options.filepath});
 
-      if (parser.preprocess) {
-        text = parser.preprocess(text, options);
-      }
+            if (parser.preprocess) {
+                text = parser.preprocess(text, options);
+            }
 
-      const json = JSON.parse(text);
-      const unsortedScripts = JSON.parse(JSON.stringify(json?.scripts || {}));
-      const sorted = (await sortPackageJson).default(json);
+            const json = JSON.parse(text);
+            const unsortedScripts = JSON.parse(JSON.stringify(json?.scripts || {}));
+            const sorted = (await sortPackageJson).default(json);
 
-      if (
-        options.filepath?.endsWith('package.json') &&
-        json?.hasOwnProperty('scripts')
-      ) {
-        sorted.scripts = unsortedScripts;
-      }
+            if (options.filepath?.endsWith('package.json') && json?.hasOwnProperty('scripts')) {
+                sorted.scripts = unsortedScripts;
+            }
 
-      text = JSON.stringify(sorted);
+            text = JSON.stringify(sorted);
 
-      return parser.parse(text, options);
+            return parser.parse(text, options);
+        },
     },
-  },
 };
