@@ -83,12 +83,6 @@ module.exports = {
         parser: 'typescript',
       },
     },
-    {
-      files: '*.svg',
-      options: require(
-        require('node:path').resolve(__dirname, 'options', 'svg.js')
-      ),
-    },
   ],
   printWidth: 120,
   tabWidth: 4,
